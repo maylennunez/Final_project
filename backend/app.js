@@ -32,13 +32,15 @@ const app = express();
 // );
 
 
-app.use(cors({
-  origin: function(origin, callback){
-    return callback(null, true);
-  },
-  optionsSuccessStatus: 200,
-  credentials: true
-}));
+// app.use(cors({
+//   origin: function(origin, callback){
+//     return callback(null, true);
+//   },
+//   optionsSuccessStatus: 200,
+//   credentials: true
+// }));
+
+app.use(cors())
 
 app.use(
   session({
